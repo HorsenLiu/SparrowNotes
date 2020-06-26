@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_all"
+        android:icon="@drawable/search_icon_title"
+        android:title="按标题查找" />
+    <item
+        android:id="@+id/top_all"
+        android:icon="@drawable/search_icon_content"
+        android:title="按内容查找" />
+    <item
+        android:id="@+id/delete_all"
+        android:icon="@drawable/search_icon_category"
+        android:title="按分类查找" />
+</menu>

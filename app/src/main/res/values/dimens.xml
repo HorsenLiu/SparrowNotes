@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="check_size">23sp</dimen>
+    <dimen name="menu_text_size">18sp</dimen>
+    <dimen name="cate_text_size">18sp</dimen>
+</resources>

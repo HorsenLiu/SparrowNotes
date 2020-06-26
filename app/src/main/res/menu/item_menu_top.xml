@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/edit_top"
+        android:icon="@drawable/icon_edit"
+        android:title="@string/edit" />
+    <item
+        android:id="@+id/top_top"
+        android:icon="@drawable/icon_top"
+        android:title="@string/noTop" />
+    <item
+        android:id="@+id/delete_top"
+        android:icon="@drawable/icon_delete"
+        android:title="@string/delete" />
+</menu>

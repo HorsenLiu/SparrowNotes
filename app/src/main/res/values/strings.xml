@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">麻雀记</string>
+    <string name="duration_time">200</string>
+    <string name="edit">编辑</string>
+    <string name="top">置顶</string>
+    <string name="noTop">取消置顶</string>
+    <string name="delete">删除</string>
+    <string name="all">全部</string>
+    <string name="create">新建</string>
+    <string name="reset">清空</string>
+    <string name="save">保存</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+
+    <string name="account">账户</string>
+    <string name="date">日子</string>
+    <string name="location">位置</string>
+    <string name="link">链接</string>
+    <string name="note">便签</string>
+    <string name="question">三省</string>
+    <string name="bill">消费</string>
+    <string name="mood">心情</string>
+
+    <string name="slogan">整&#160;&#160;&#160;&#160;理&#160;&#160;&#160;&#160;
+        你&#160;&#160;&#160;&#160;的&#160;&#160;&#160;&#160;碎&#160;&#160;&#160;&#160;
+        片&#160;&#160;&#160;&#160;信&#160;&#160;&#160;&#160;息</string>
+    <string name="confirm">确定</string>
+    <string name="greeting">永远相信，美好的事情即将发生。</string>
+</resources>

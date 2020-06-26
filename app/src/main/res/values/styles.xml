@@ -1,0 +1,21 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="popupMenuStyle">@style/MyPopupMenu</item>
+        <item name="textAppearanceSmallPopupMenu">@style/MenuTextStyle</item>
+        <item name="textAppearanceLargePopupMenu">@style/MenuTextStyle</item>
+    </style>
+
+    <style name="MenuTextStyle">
+        <item name="android:textColor">@color/colorPrimaryDark</item>
+        <item name="android:textSize">@dimen/menu_text_size</item>
+    </style>
+    <style name="MyPopupMenu">
+        <item name="android:popupBackground">@color/background</item>
+    </style>
+
+</resources>

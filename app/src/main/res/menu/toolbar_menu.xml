@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/search_title"
+        android:icon="@drawable/search_icon_title"
+        android:title="按标题搜索"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/search_content"
+        android:icon="@drawable/search_icon_content"
+        android:title="按内容搜索"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/search_category"
+        android:icon="@drawable/search_icon_category"
+        android:title="按分类搜索"
+        app:showAsAction="ifRoom" />
+</menu>
