@@ -188,7 +188,7 @@ public class HomeActivity extends AppCompatActivity implements NavigationView.On
                 break;
             case R.id.nav_github:
                 // 跳转到我的项目页面
-                Uri uri = Uri.parse("https://github.com/HorsenLiu/SparrowNotes/tree/dev");
+                Uri uri = Uri.parse("https://github.com/HorsenLiu/SparrowNotes");
                 Intent intentUri = new Intent(Intent.ACTION_VIEW, uri);
                 startActivity(intentUri);
                 break;
