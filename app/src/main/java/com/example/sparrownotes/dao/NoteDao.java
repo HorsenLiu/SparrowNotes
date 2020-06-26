@@ -137,7 +137,7 @@ public class NoteDao {
     public List<NoteBean> queryAll() {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryForAll();
+            notes = dao.queryBuilder().orderBy("note_id", false).query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -170,7 +170,8 @@ public class NoteDao {
     public List<NoteBean> queryForWhat(String columnName, String data) {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryForEq(columnName, data);
+            notes = dao.queryBuilder().orderBy("note_id", false)
+                    .where().eq(columnName, data).query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -179,6 +180,7 @@ public class NoteDao {
 
     /**
      * 模糊查询
+     *
      * @param columnName
      * @param data
      * @return
@@ -186,7 +188,8 @@ public class NoteDao {
     public List<NoteBean> queryLikeWhat(String columnName, String data) {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryBuilder().where().like(columnName, "%" + data + "%").query();
+            notes = dao.queryBuilder().orderBy("note_id", false)
+                    .where().like(columnName, "%" + data + "%").query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
