@@ -34,6 +34,7 @@
         android:id="@+id/check_remember_pwd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:text="记住密码"
         android:textColor="@color/text_black"
         android:textSize="16sp"
@@ -50,10 +51,10 @@
         android:text="忘记密码"
         android:textColor="@color/text_black"
         android:textSize="14sp"
-        app:layout_constraintBaseline_toBaselineOf="@+id/check_remember_pwd"
-        app:layout_constraintEnd_toStartOf="@+id/guideline9"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/guideline12" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/text_register"
+        app:layout_constraintEnd_toStartOf="@+id/guideline12"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/guideline6" />
 
     <TextView
         android:id="@+id/text_register"
