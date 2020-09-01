@@ -52,7 +52,7 @@ public class NoteDao {
     }
 
     /**
-     * 向user表中添加一条数据
+     * 向note表中添加一条数据
      * create:插入一条数据或集合
      * createIfNotExists:如果不存在则插入
      * createOrUpdate:如果指定id则更新

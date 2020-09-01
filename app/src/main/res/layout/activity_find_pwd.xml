@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="@drawable/home_background"
     tools:context=".MainActivity">
 
     <Button
@@ -41,12 +41,12 @@
         android:id="@+id/textInputLayout2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline4"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline4"
-        android:focusable="true"
-        android:focusableInTouchMode="true">
+        app:layout_constraintTop_toTopOf="@+id/guideline4">
 
         <EditText
             android:id="@+id/edit_confirm_pwd_find"
@@ -63,12 +63,12 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline3"
-        android:focusable="true"
-        android:focusableInTouchMode="true">
+        app:layout_constraintTop_toTopOf="@+id/guideline3">
 
         <EditText
             android:id="@+id/edit_password_find"
@@ -85,12 +85,12 @@
         android:id="@+id/textInputLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
         app:layout_constraintBottom_toTopOf="@+id/guideline10"
         app:layout_constraintEnd_toStartOf="@+id/guideline9"
         app:layout_constraintStart_toStartOf="@+id/guideline6"
-        app:layout_constraintTop_toTopOf="@+id/guideline10"
-        android:focusable="true"
-        android:focusableInTouchMode="true">
+        app:layout_constraintTop_toTopOf="@+id/guideline10">
 
         <EditText
             android:id="@+id/edit_email_find"
