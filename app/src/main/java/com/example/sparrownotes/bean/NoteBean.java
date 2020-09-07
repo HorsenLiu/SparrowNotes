@@ -21,6 +21,9 @@ public class NoteBean {
     @DatabaseField(generatedId = true, columnName = "note_id")
     private int noteID;
 
+    @DatabaseField(columnName = "user_id")
+    private int userID;
+
     @DatabaseField(defaultValue = "无标题")
     private String title;
 
@@ -42,14 +45,16 @@ public class NoteBean {
     public NoteBean() {
     }
 
-    public NoteBean(String title, String content, String category, String time) {
+    public NoteBean(int userID, String title, String content, String category, String time) {
+        this.userID = userID;
         this.title = title;
         this.content = content;
         this.category = category;
         this.time = time;
     }
 
-    public NoteBean(String title, String content, String category, String time, int imgResource) {
+    public NoteBean(int userID, String title, String content, String category, String time, int imgResource) {
+        this.userID = userID;
         this.title = title;
         this.content = content;
         this.category = category;
@@ -61,6 +66,7 @@ public class NoteBean {
     public String toString() {
         return "NoteBean{" +
                 "noteID=" + noteID +
+                "userID=" + userID +
                 ", title='" + title + '\'' +
                 ", content='" + content + '\'' +
                 ", category='" + category + '\'' +
@@ -68,6 +74,14 @@ public class NoteBean {
                 ", imgResource='" + imgResource + '\'' +
                 ", isTop='" + isTop + '\'' +
                 '}';
+    }
+
+    public int getUserID() {
+        return userID;
+    }
+
+    public void setUserID(int userID) {
+        this.userID = userID;
     }
 
     public String getTop() {

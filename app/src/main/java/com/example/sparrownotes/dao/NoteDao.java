@@ -134,10 +134,13 @@ public class NoteDao {
      *
      * @return 返回查询结果集
      */
-    public List<NoteBean> queryAll() {
+    public List<NoteBean> queryAll(int userID) {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryBuilder().orderBy("note_id", false).query();
+            notes = dao.queryBuilder()
+                    .orderBy("note_id", false)
+                    .where().eq("user_id", userID)
+                    .query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -150,14 +153,17 @@ public class NoteDao {
      * @param id
      * @return
      */
-    public NoteBean queryById(int id) {
-        NoteBean user = null;
+    public NoteBean queryById(int id, int userID) {
+        NoteBean note = null;
         try {
-            user = dao.queryForId(id);
+            note = dao.queryBuilder()
+                    .where().eq("note_id", id)
+                    .and().eq("user_id", userID)
+                    .queryForFirst();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return user;
+        return note;
     }
 
     /**
@@ -167,11 +173,14 @@ public class NoteDao {
      * @param data       数据
      * @return
      */
-    public List<NoteBean> queryForWhat(String columnName, String data) {
+    public List<NoteBean> queryForWhat(String columnName, String data, int userID) {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryBuilder().orderBy("note_id", false)
-                    .where().eq(columnName, data).query();
+            notes = dao.queryBuilder()
+                    .orderBy("note_id", false)
+                    .where().eq(columnName, data)
+                    .and().eq("user_id", userID)
+                    .query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -185,11 +194,14 @@ public class NoteDao {
      * @param data
      * @return
      */
-    public List<NoteBean> queryLikeWhat(String columnName, String data) {
+    public List<NoteBean> queryLikeWhat(String columnName, String data, int userID) {
         List<NoteBean> notes = null;
         try {
-            notes = dao.queryBuilder().orderBy("note_id", false)
-                    .where().like(columnName, "%" + data + "%").query();
+            notes = dao.queryBuilder()
+                    .orderBy("note_id", false)
+                    .where().like(columnName, "%" + data + "%")
+                    .and().eq("user_id", userID)
+                    .query();
         } catch (SQLException e) {
             e.printStackTrace();
         }

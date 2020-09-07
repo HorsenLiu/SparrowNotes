@@ -2,6 +2,12 @@ package com.example.sparrownotes.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -10,19 +16,12 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
-
-import android.os.Handler;
-import android.os.Message;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.TextView;
-
 import com.example.sparrownotes.R;
 import com.example.sparrownotes.adapter.NoteAdapter;
 import com.example.sparrownotes.bean.NoteBean;
 import com.example.sparrownotes.dao.NoteDao;
 import com.example.sparrownotes.util.Constant;
+import com.example.sparrownotes.util.SharedPreferenceUtil;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -31,6 +30,7 @@ import java.util.List;
 
 /**
  * 显示置顶note
+ *
  * @author Horsen
  */
 public class TopFragment extends Fragment {
@@ -42,8 +42,10 @@ public class TopFragment extends Fragment {
     private List<NoteBean> notesList = new ArrayList<>();
     private static final String TAG = "TopFragment";
     private NoteDao noteDao;
+    SharedPreferenceUtil spu = SharedPreferenceUtil.getInstance(getActivity());
 
-    public TopFragment() {}
+    public TopFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -97,7 +99,7 @@ public class TopFragment extends Fragment {
      * 初始化数据
      */
     public void initData() {
-        List<NoteBean> noteBeans = noteDao.queryForWhat("is_top", "1");
+        List<NoteBean> noteBeans = noteDao.queryForWhat("is_top", "1", spu.getInt(Constant.USER_ID));
         notesList.addAll(noteBeans);
     }
 

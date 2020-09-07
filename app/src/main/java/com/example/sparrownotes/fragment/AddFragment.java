@@ -18,6 +18,7 @@ import com.example.sparrownotes.bean.NoteBean;
 import com.example.sparrownotes.dao.NoteDao;
 import com.example.sparrownotes.util.Constant;
 import com.example.sparrownotes.util.NoScrollViewPager;
+import com.example.sparrownotes.util.SharedPreferenceUtil;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -70,7 +71,7 @@ public class AddFragment extends Fragment {
     private static final String TAG = "AddFragment";
     private List<View> viewList = new ArrayList<>();
     private NoteDao noteDao;
-
+    SharedPreferenceUtil spu = SharedPreferenceUtil.getInstance(getActivity());
 
     public AddFragment() {}
 
@@ -109,7 +110,7 @@ public class AddFragment extends Fragment {
      */
     public void insertNoteIntoDB(String category) {
         getTitleAndContents(category);
-        NoteBean noteBean = new NoteBean(title, content, category, "创建于 " + getToday(), imgResource);
+        NoteBean noteBean = new NoteBean(spu.getInt(Constant.USER_ID),title, content, category, "创建于 " + getToday(), imgResource);
         noteDao.insert(noteBean);
     }
 

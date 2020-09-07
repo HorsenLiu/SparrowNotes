@@ -28,13 +28,13 @@ import java.util.List;
 
 /**
  * RecyclerView适配器
+ *
  * @author Horsen
  */
 public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
     private List<NoteBean> notesList;
     private Context context;
     private NoteDao noteDao;
-    private static final String TAG = "NoteAdapter";
     SharedPreferenceUtil spu;
 
     static class ViewHolder extends RecyclerView.ViewHolder {
@@ -181,7 +181,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
      * @param position
      */
     public void setTop(int position) {
-        NoteBean noteItem = noteDao.queryById(notesList.get(position).getNoteID());
+        NoteBean noteItem = noteDao.queryById(notesList.get(position).getNoteID(),spu.getInt(Constant.USER_ID));
         noteItem.setTop("1");
         noteDao.update(noteItem);
         notifyDataSetChanged();
@@ -193,7 +193,7 @@ public class NoteAdapter extends RecyclerView.Adapter<NoteAdapter.ViewHolder> {
      * @param position
      */
     public void notSetTop(int position) {
-        NoteBean noteItem = noteDao.queryById(notesList.get(position).getNoteID());
+        NoteBean noteItem = noteDao.queryById(notesList.get(position).getNoteID(), spu.getInt(Constant.USER_ID));
         noteItem.setTop("0");
         noteDao.update(noteItem);
         notesList.remove(position);

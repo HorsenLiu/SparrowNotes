@@ -3,9 +3,8 @@ package com.example.sparrownotes.dao;
 import android.content.Context;
 
 import com.example.sparrownotes.bean.UserBean;
-import com.j256.ormlite.dao.Dao;
 import com.example.sparrownotes.util.DBHelper;
-import com.j256.ormlite.stmt.QueryBuilder;
+import com.j256.ormlite.dao.Dao;
 
 import java.sql.SQLException;
 import java.util.List;
@@ -186,18 +185,16 @@ public class UserDao {
      * @return
      */
     public List<UserBean> queryByUserNameAndPassword(String userName, String password) {
+        List<UserBean> users = null;
         try {
-            QueryBuilder<UserBean, Integer> builder = dao.queryBuilder();
-            builder
-                    .where()
-                    .eq("user_name", userName)
-                    .and()
-                    .eq("password", password);
-            builder.orderBy("user_id", true);
-            return builder.query();
+            users = dao.queryBuilder()
+                    .orderBy("user_id", true)
+                    .where().eq("user_name", userName)
+                    .and().eq("password", password)
+                    .query();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return users;
     }
 }

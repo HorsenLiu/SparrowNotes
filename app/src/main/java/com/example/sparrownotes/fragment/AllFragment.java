@@ -35,7 +35,8 @@ public class AllFragment extends Fragment {
     private NoteDao noteDao;
     SharedPreferenceUtil spu = SharedPreferenceUtil.getInstance(getActivity());
 
-    public AllFragment() {}
+    public AllFragment() {
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -73,7 +74,7 @@ public class AllFragment extends Fragment {
      * 初始化数据
      */
     public void initData() {
-        List<NoteBean> noteBeams = noteDao.queryAll();
+        List<NoteBean> noteBeams = noteDao.queryAll(spu.getInt(Constant.USER_ID));
         notesList.addAll(noteBeams);
     }
 
@@ -86,7 +87,7 @@ public class AllFragment extends Fragment {
         String column = spu.getString(Constant.SEARCH_FOR_WHAT);
         String value = spu.getString(Constant.SEARCH_VALUE);
         if (column != "" && value != "") {
-            List<NoteBean> noteBeans = noteDao.queryLikeWhat(column, value);
+            List<NoteBean> noteBeans = noteDao.queryLikeWhat(column, value,spu.getInt(Constant.USER_ID));
             notesList.addAll(noteBeans);
             // 用后即删
             spu.removeKey(Constant.SEARCH_FOR_WHAT);

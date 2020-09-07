@@ -18,6 +18,7 @@ import com.example.sparrownotes.dao.UserDao;
 
 /**
  * 自定义对话框
+ *
  * @author Horsen
  */
 public class DialogUtil {
@@ -107,8 +108,9 @@ public class DialogUtil {
      * @param context
      */
     public static void editNoteDialog(final Context context, int noteID) {
+        SharedPreferenceUtil spu = SharedPreferenceUtil.getInstance(context);
         NoteDao noteDao = new NoteDao(context);
-        NoteBean noteItem = noteDao.queryById(noteID);
+        NoteBean noteItem = noteDao.queryById(noteID, spu.getInt(Constant.USER_ID));
         // 获得布局管理器
         LayoutInflater inflater = LayoutInflater.from(context);
         // 将布局转换成View
