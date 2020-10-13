@@ -23,7 +23,11 @@
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
-    <loaded-nodes />
+    <loaded-nodes>
+      <connection connection-id="177c06e4-930c-4071-8ad8-bde32875fc95">
+        <schema name="main" object-types="dataset trigger, table, constraint, column, index" />
+      </connection>
+    </loaded-nodes>
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="177c06e4-930c-4071-8ad8-bde32875fc95">
@@ -31,13 +35,18 @@
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="177c06e4-930c-4071-8ad8-bde32875fc95" object-ref="schemas/main/tables/tb_note" />
+      <object connection-id="177c06e4-930c-4071-8ad8-bde32875fc95" object-ref="schemas/main/tables/tb_user" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="177c06e4-930c-4071-8ad8-bde32875fc95" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="177c06e4-930c-4071-8ad8-bde32875fc95" dataset="main.tb_user" active-filter-id="EMPTY_FILTER" />
     <filter-actions connection-id="177c06e4-930c-4071-8ad8-bde32875fc95" dataset="main.user" active-filter-id="EMPTY_FILTER" />
+    <filter-actions connection-id="177c06e4-930c-4071-8ad8-bde32875fc95" dataset="main.tb_note" active-filter-id="EMPTY_FILTER" />
   </component>
   <component name="DBNavigator.Project.EditorStateManager">
     <last-used-providers />
@@ -77,7 +86,7 @@
           <port value="1234" />
           <database value="database" />
           <files>
-            <file path="E:\File_QQ\ToDa.db" schema="main" />
+            <file path="E:\Proj_Android\SparrowNotes\my_databases\sparrow3.db" schema="main" />
           </files>
           <type value="NONE" />
           <user value="" />
