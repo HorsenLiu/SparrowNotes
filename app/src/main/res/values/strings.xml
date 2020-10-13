@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">麻雀记</string>
+    <string name="app_name">麻雀笔记</string>
     <string name="duration_time">200</string>
     <string name="edit">编辑</string>
     <string name="top">置顶</string>
