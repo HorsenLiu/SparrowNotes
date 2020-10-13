@@ -2,6 +2,28 @@
 
 > 麻雀虽小，五脏俱全
 
+* [1\. 软件产品介绍](#1-%E8%BD%AF%E4%BB%B6%E4%BA%A7%E5%93%81%E4%BB%8B%E7%BB%8D)
+* [2\. 相关技术介绍](#2-%E7%9B%B8%E5%85%B3%E6%8A%80%E6%9C%AF%E4%BB%8B%E7%BB%8D)
+  * [2\.1 ButterKnife](#21-butterknife)
+  * [2\.2 SharedPreferences](#22-sharedpreferences)
+  * [2\.3 SQLite \+ OrmLite](#23-sqlite--ormlite)
+  * [2\.4 多线程编程 Handler \+ Message](#24-%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BC%96%E7%A8%8B-handler--message)
+  * [2\.5 Glide](#25-glide)
+  * [2\.6 RecyclerView 控件](#26-recyclerview-%E6%8E%A7%E4%BB%B6)
+  * [2\.7 Fragment \+ ViewPager](#27-fragment--viewpager)
+  * [2\.8 Toolbar 控件](#28-toolbar-%E6%8E%A7%E4%BB%B6)
+  * [2\.9 TextInputLayout 控件](#29-textinputlayout-%E6%8E%A7%E4%BB%B6)
+  * [2\.10 滑动菜单 DrawerLayout \+ NavigationView](#210-%E6%BB%91%E5%8A%A8%E8%8F%9C%E5%8D%95-drawerlayout--navigationview)
+  * [2\.11 CircleImageView 控件](#211-circleimageview-%E6%8E%A7%E4%BB%B6)
+  * [2\.12 下拉刷新 SwipeRefreshLayout](#212-%E4%B8%8B%E6%8B%89%E5%88%B7%E6%96%B0-swiperefreshlayout)
+* [3\. 软件功能](#3-%E8%BD%AF%E4%BB%B6%E5%8A%9F%E8%83%BD)
+  * [3\.1 整体功能图](#31-%E6%95%B4%E4%BD%93%E5%8A%9F%E8%83%BD%E5%9B%BE)
+  * [3\.2 登录模块和注册模块功能点描述](#32-%E7%99%BB%E5%BD%95%E6%A8%A1%E5%9D%97%E5%92%8C%E6%B3%A8%E5%86%8C%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E7%82%B9%E6%8F%8F%E8%BF%B0)
+  * [3\.3 置顶、添加、列表页面功能描述](#33-%E7%BD%AE%E9%A1%B6%E6%B7%BB%E5%8A%A0%E5%88%97%E8%A1%A8%E9%A1%B5%E9%9D%A2%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0)
+  * [3\.4 抽屉模块功能描述](#34-%E6%8A%BD%E5%B1%89%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0)
+  * [3\.5 工具栏模块功能描述](#35-%E5%B7%A5%E5%85%B7%E6%A0%8F%E6%A8%A1%E5%9D%97%E5%8A%9F%E8%83%BD%E6%8F%8F%E8%BF%B0)
+* [4\. 运行截图](#4-%E8%BF%90%E8%A1%8C%E6%88%AA%E5%9B%BE)
+
 ### 1. 软件产品介绍
 
 在快节奏的生活已成为常态的当下，我们每天都不得不接收大量的碎片化信息，这些内容重要且琐碎，如果不能做到有效地整理归纳，就有可能在关键时刻出现纰漏，不仅影响效率，甚至还会在一些场合带来风险。因此，开发一款能够帮助用户整理碎片信息的应用就显得很有必要了。
